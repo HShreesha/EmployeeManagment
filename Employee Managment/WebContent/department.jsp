@@ -49,7 +49,7 @@ input[type="text"],input[type="password"],select{
 			<br>
 			<a href = "./index.jsp">Login</a>
 			<br>
-			<a href = "./register.jsp">Register</a>
+			<a href = "./Register">Register</a>
 			<br>
 			<a href = "./project.jsp">Add Project</a>
 		</div>

@@ -115,7 +115,7 @@ public class DB {
 		Statement stmt;
 		try {
 			if(con != null){
-				String query = "select * from Department";
+				String query = "select * from Project";
 				System.out.println(query);
 				stmt=con.createStatement();  
 				ResultSet rs=stmt.executeQuery(query);

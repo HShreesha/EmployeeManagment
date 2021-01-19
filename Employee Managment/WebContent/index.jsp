@@ -34,7 +34,7 @@
 				<input type = "reset" value = "reset">
 			</form>
 			<br>
-			<a href = "./register.jsp">Register</a>
+			<a href = "./Register">Register</a>
 		</div>
 	</div>
 </body>

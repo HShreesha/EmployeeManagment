@@ -37,9 +37,9 @@ input[type="text"],input[type="password"],select{
 			<span style = "color:red;"><%= (error != null)?error:"" %></span>
 			<form action = "./Register">
 				<input type = "hidden" name = "method" = value = "addProj">
-				<div>Project Id<input type = "text" id = "projId" name = "projId" placeholder = "Enter Department Id"/><span style = "color:red;">*</span><br></div>
+				<div>Project Id<input type = "text" id = "projId" name = "projId" placeholder = "Enter Project Id"/><span style = "color:red;">*</span><br></div>
 				<br>
-				<div>Project Name<input type = "text" id = "projName" name = "projName" placeholder = "Enter Department Name"/><br></div>
+				<div>Project Name<input type = "text" id = "projName" name = "projName" placeholder = "Enter Project Name"/><br></div>
 				<br>
 				<div>Project Details<br><textarea style = "width:100%" type = "text" id = "projLoc" name = "projLoc" placeholder = "Enter Department Location"></textarea><br></div><br>
 				<br><br>
@@ -49,7 +49,7 @@ input[type="text"],input[type="password"],select{
 			<br>
 			<a href = "./index.jsp">Login</a>
 			<br>
-			<a href = "./register.jsp">Register</a>
+			<a href = "./Register">Register</a>
 			<br>
 			<a href = "./department.jsp">Add Department</a>
 		</div>

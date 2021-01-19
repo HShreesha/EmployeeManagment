@@ -112,7 +112,7 @@ public class Register extends HttpServlet {
 				request.setAttribute("error",error);
 				request.getRequestDispatcher("project.jsp").include(request, response);
 			}
-		}else{
+		}else if(method != null && method.equalsIgnoreCase("addEmp")){
 			String name = (String)request.getParameter("name");
 			String password = (String)request.getParameter("password");
 			String gender = (String)request.getParameter("gender");
@@ -164,6 +164,13 @@ public class Register extends HttpServlet {
 				request.getRequestDispatcher("register.jsp").include(request, response);
 			}
 		}
+		try {
+			DB.setListToSession(request);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		request.getRequestDispatcher("register.jsp").include(request, response);
 	}
 
 	/**
