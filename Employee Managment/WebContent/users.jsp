@@ -46,7 +46,7 @@ input[type="text"],input[type="password"],select{
 		var innerHTML = '<table style = "border: 2px solid;"><tr><th>Name</th><th>Password</th><th>Gender</th><th>Phone No</th><th>Age</th><th>Department Id</th><th>Project Id</th><th>Delete</th></tr>';
 		for(var i = 0 ; i < list.length ; i++){
 			var user = list[i];
-			if(pattern == '' || pattern.trim() == '' || (pattern != '' && user.name.toLowerCase().indexOf(pattern) != -1)){
+			if(pattern == '' || pattern.trim() == '' || (pattern != '' && (user.name.toLowerCase().indexOf(pattern) != -1 || user.phone.indexOf(pattern) != -1 || user.gender.toLowerCase().indexOf(pattern) != -1 || user.project.indexOf(pattern) != -1 || user.department.indexOf(pattern) != -1))){
 				innerHTML += '<tr><td style = "border: 1px solid;" onclick = "userDetails('+i+');"><a href = "#">'+user.name+'</a></td>';
 				innerHTML += '<td style = "border: 1px solid;">'+user.password+'</td>';
 				innerHTML += '<td style = "border: 1px solid;">'+user.gender+'</td>';

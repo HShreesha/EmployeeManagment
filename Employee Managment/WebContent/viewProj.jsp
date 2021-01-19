@@ -42,7 +42,7 @@ input[type="text"],input[type="password"],select{
 		var innerHTML = '<table style = "border: 2px solid;"><tr><th>Id</th><th>Project Name</th><th>Project Details</th></tr>';
 		for(var i = 0 ; i < projList.length ; i++){
 			var proj = projList[i];
-			if(pattern == '' || pattern.trim() == '' || (pattern != '' && proj.pName.toLowerCase().indexOf(pattern) != -1 && proj.id.indexOf(pattern) != -1)){
+			if(pattern == '' || pattern.trim() == '' || (pattern != '' && (proj.pName.toLowerCase().indexOf(pattern) != -1 || proj.id.indexOf(pattern) != -1 || proj.pDetails.toLowerCase().indexOf(pattern) != -1))){
 				innerHTML += '<tr><td style = "border: 1px solid;" onclick = "projDetails('+i+');"><a href = "#">'+proj.id+'</a></td>';
 				innerHTML += '<td style = "border: 1px solid;">'+proj.pName+'</td>';
 				innerHTML += '<td style = "border: 1px solid;">'+proj.pDetails+'</td>';
@@ -72,7 +72,6 @@ input[type="text"],input[type="password"],select{
 			<br>
 			<a href = "./users.jsp">View Emps</a><br>
 			<a href = "./register.jsp">Register</a><br>
-			<a href = "./department.jsp">View</a><br>
 			<a href = "./viewDept.jsp">View Department Details</a><br>
 			<a href = "./index.jsp">Login</a>
 		</div>
@@ -93,7 +92,6 @@ input[type="text"],input[type="password"],select{
 			</form>
 			<br>
 			<a href = "./users.jsp">View Emps</a><br>
-			<a href = "./department.jsp">View</a><br>
 			<a href = "./register.jsp">Register</a><br>
 			<a href = "./viewDept.jsp">View Department Details</a><br>
 			<a href = "./index.jsp">Login</a>

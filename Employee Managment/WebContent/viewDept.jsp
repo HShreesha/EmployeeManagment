@@ -42,7 +42,7 @@ var depList = <%=session.getAttribute("depList")%>;
 		var innerHTML = '<table style = "border: 2px solid;"><tr><th>Id</th><th>Dept Name</th><th>Dept Location</th></tr>';
 		for(var i = 0 ; i < depList.length ; i++){
 			var dept = depList[i];
-			if(pattern == '' || pattern.trim() == '' || (pattern != '' && dept.name.toLowerCase().indexOf(pattern) != -1 && dept.id.indexOf(pattern) != -1)){
+			if(pattern == '' || pattern.trim() == '' || (pattern != '' && (dept.dName.toLowerCase().indexOf(pattern) != -1 || dept.id.indexOf(pattern) != -1 || dept.dLoc.toLowerCase().indexOf(pattern) != -1))){
 				innerHTML += '<tr><td style = "border: 1px solid;" onclick = "deptDetails('+i+');"><a href = "#">'+dept.id+'</a></td>';
 				innerHTML += '<td style = "border: 1px solid;">'+dept.dName+'</td>';
 				innerHTML += '<td style = "border: 1px solid;">'+dept.dLoc+'</td>';
@@ -67,7 +67,7 @@ var depList = <%=session.getAttribute("depList")%>;
 	<div>
 		<div class = "login" id = "listDiv">
 			<h4 style = "margin: 0px 0px 0px 5px;">Department</h4><hr>
-			<div>Search&nbsp; <input type = "text" id = "search" placeholder = "User Search" onkeyup="setTimeout(dept(),1000);"/></div><br>
+			<div>Search&nbsp; <input type = "text" id = "search" placeholder = "Department Search" onkeyup="setTimeout(dept(),1000);"/></div><br>
 			<div id = "userList"></div>
 			<a href = "./department.jsp">Add Department</a><br>
 			<a href = "./viewProj.jsp">View Project Details</a><br>
